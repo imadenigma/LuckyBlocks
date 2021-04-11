@@ -1,0 +1,26 @@
+#the lucky block
+Lucky-block: "SPONGE"
+#0 = amount and 1 = name
+break-lucky-items: "You broke a lucky block you won &4{0}"
+items:
+  #type of item
+  GOLDEN_APPLE:
+    name: "&3Apple from heaven"
+    amount: 10
+    #100 of chance for all gifts means selection is random
+    chance: 10
+
+  DIAMOND_SWORD:
+    name: "&4Fire Sword"
+    amount: 1
+    chance: 10
+
+commands:
+  #the command and keep in mind _ gonna be replaced by space
+  economy_give_{player}_1000:
+    #msg sent to the player when he receives the gift
+    msg: "&3You won 1000$ |&cenjoy it"
+    chance: 20
+  tell_{player}_We_love_you:
+    msg: "&3You won 1000$, &cenjoy it"
+    chance: 60

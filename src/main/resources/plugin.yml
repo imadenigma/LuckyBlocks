@@ -1,0 +1,7 @@
+name: LuckBlocks
+version: ${project.version}
+main: me.imadenigma.luckblocks.LuckBlocks
+api-version: 1.13
+commands:
+  luckyblock:
+    usage: /luckyblock give <player> <amount>
