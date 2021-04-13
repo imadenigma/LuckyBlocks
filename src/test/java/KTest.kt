@@ -1,6 +1,9 @@
 import junit.framework.TestCase
+import org.apache.commons.lang.math.RandomUtils
 import org.spongepowered.configurate.yaml.YamlConfigurationLoader
 import java.io.File
+import java.util.Collections.max
+
 
 class KTest: TestCase() {
 
@@ -12,7 +15,15 @@ class KTest: TestCase() {
         Thread.sleep(10000)
         node = loader.load()
         println(node.node("name").getString("null"))
+    }
 
+    fun test1() {
+        for (i in 0..100)
+            println(RandomUtils.nextInt(100))
+    }
+    fun test2() {
+        val list = listOf(1,2,3,24562135,136,632,6,8,99,1,3,67)
+        println(max(list))
     }
 
 }

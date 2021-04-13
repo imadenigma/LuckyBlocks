@@ -33,11 +33,7 @@ class Commands : CommandExecutor {
                 if (sender.hasPermission("luckyblock.reload")) {
                     sender.sendMessage("&4reloading...".colorize())
                     val ms = measureTimeMillis {
-                        val file = File(LuckBlocks.instance.dataFolder, "config.yml")
-                        val loader = YamlConfigurationLoader.builder().file(file).build()
-                        Configuration.config = loader.load()
-                        Configuration.luckyType =
-                            Material.matchMaterial(Configuration.config.node("Lucky-block").getString("SPONGE"))!!
+                        Configuration.loadConfiguration()
                     }
                     sender.sendMessage("&breloading took &4$ms &ams &7(that's great)".colorize())
                 } else sender.sendMessage("&4You don't have permission to execute this command".colorize())
